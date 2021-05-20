@@ -24,7 +24,6 @@ const Home = () => {
       console.log(error);
     }
   };
-
   return (
     <div className="home-container">
       <section className="search-section">
