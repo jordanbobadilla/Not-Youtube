@@ -1,4 +1,5 @@
 import YouTube from "react-youtube";
+import {Link} from "react-router-dom"
 import { useState, useEffect } from "react";
 
 const Video = (props) => {
@@ -36,7 +37,7 @@ const Video = (props) => {
   return (
     <main>
       <div>
-        <button>Go Back</button>
+        <Link to="/Home"><button>Go Back</button></Link>
         <YouTube videoId={id} />
       </div>
       <form onSubmit={handleSubmit}>
@@ -60,14 +61,19 @@ const Video = (props) => {
       </form>
       <hr />
       <ul>
-        { showComments ? commentList.map((comment) => {
+        {  commentList.map((comment) => {
+          if(comment.name){
+
           return (
             <li>
               <h3>{comment.name}</h3>
               <p>{comment.comment}</p>
             </li>
           );
-        }) : <ul></ul>}
+          }else{
+           return(<ul></ul>) 
+          }
+        })}
       </ul>
     </main>
   );
