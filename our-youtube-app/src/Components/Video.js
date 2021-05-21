@@ -1,14 +1,14 @@
 import YouTube from "react-youtube";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const Video = (props) => {
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
-  const [comments, setComments] = useState({
-  });
+  const [comments, setComments] = useState({});
   const [commentList, setCommentList] = useState([]);
   const [showComments, setshowComments] = useState(false);
+  // dont need show list anymore unless we want to toggle between show list and not show
 
   const handleChange = (e) => {
     const { value, id } = e.target;
@@ -29,7 +29,7 @@ const Video = (props) => {
   };
 
   useEffect(() => {
-    setCommentList( prevCommentList => [...prevCommentList, comments]);
+    setCommentList((prevCommentList) => [...prevCommentList, comments]);
   }, [comments]);
 
   const { id } = props.match.params;
@@ -37,7 +37,9 @@ const Video = (props) => {
   return (
     <main>
       <div>
-        <Link to="/Home"><button>Go Back</button></Link>
+        <Link to="/Home">
+          <button>Go Back</button>
+        </Link>
         <YouTube videoId={id} />
       </div>
       <form onSubmit={handleSubmit}>
@@ -61,17 +63,16 @@ const Video = (props) => {
       </form>
       <hr />
       <ul>
-        {  commentList.map((comment) => {
-          if(comment.name){
-
-          return (
-            <li>
-              <h3>{comment.name}</h3>
-              <p>{comment.comment}</p>
-            </li>
-          );
-          }else{
-           return(<ul></ul>) 
+        {commentList.map((comment) => {
+          if (comment.name) {
+            return (
+              <li>
+                <h3>{comment.name}</h3>
+                <p>{comment.comment}</p>
+              </li>
+            );
+          } else {
+            return <ul></ul>;
           }
         })}
       </ul>
