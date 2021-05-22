@@ -4,6 +4,7 @@ import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Video from "./Components/Video"
+import React from 'react';
 
 function App() {
   return (
