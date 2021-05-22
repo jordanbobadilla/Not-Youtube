@@ -1,23 +1,59 @@
 .NavContainer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: linear-gradient(270deg, #2181fe, #21edfe, #3621fe);
     -webkit-animation: AnimationName 9s ease infinite;
     -moz-animation: AnimationName 9s ease infinite;
     animation: AnimationName 9s ease infinite;
     background-size: 600% 600%;
+    height: 80px;
+    font-family: Futura;
+    padding: 20px;
+    box-shadow: 0px 5px 18px 4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 5px 18px 4px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 5px 18px 4px rgba(0,0,0,0.75);
+  }
+
+  .first-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+  }
+
+  .first-nav p{
+    margin-left: 5px;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  .first-nav img {
+    height: 30px;
   }
   
   .NavContainer a {
     color: white;
     font-size: 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 10px;
   }
 
   .NavContainer a:hover{
-    background-color: grey;
+    padding: 10px;
+    background-color: #929292;
+    text-decoration: underline;
   }
 
+  .sec-nav .about{
+
+    margin-left: 20px;
+  }
+
+  .NavContainer .active {
+    text-decoration: underline;
+  }
 
   @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
