@@ -4,17 +4,33 @@
     align-items: center;
     /* justify-content: center; */
     padding : 1%;
-    background-color: navajowhite;
+    background-color: #ebebeb;
     height: 100vh;
 }
 
 .search-section{
-   width: 250px;
+   display: flex;
+   justify-content: space-around;
 border: solid blue 1px;
 background-color: navy;
 }
 
 .default-message{
-    width:250px;
+
 background-color: cornflowerblue;
+}
+
+.search-input{
+    color : #929292
+    /* questionable color  */
+}
+
+button{
+    background-color:blue ;
+    color: white;
+    border-radius: 8px;
+}
+
+input{
+    border-radius: 8px;
 }
