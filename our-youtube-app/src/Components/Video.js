@@ -2,6 +2,7 @@ import YouTube from "react-youtube";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import React from 'react';
+import axios from "axios"
 
 
 const Video = (props) => {
@@ -9,7 +10,7 @@ const Video = (props) => {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState({});
   const [commentList, setCommentList] = useState([]);
-  const [showComments, setshowComments] = useState(false);
+  const [videoObj, setVideoObj] = useState({});
   // dont need show list anymore unless we want to toggle between show list and not show
 
   const handleChange = (e) => {
@@ -23,7 +24,6 @@ const Video = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setshowComments(true);
     setComments({
       name: name,
       comment: comment,
@@ -36,14 +36,36 @@ const Video = (props) => {
 
   const { id } = props.match.params;
 
+  const fetchViews = async () => {
+    try {
+        const res = await axios.get(`https://youtube.googleapis.com/youtube/v3/videos?part=statistics&part=snippet&id=${id}&key=${process.env.REACT_APP_API_KEY}`)
+        setVideoObj(res.data.items[0])
+        debugger
+    } catch (error) {
+        console.log(error);
+    }
+  }
+  useEffect(() => {
+      fetchViews()
+  }, [])
+
+  
   return (
     <main>
-      <div>
+      <section>
         <Link to="/Home">
           <button>Go Back</button>
         </Link>
         <YouTube videoId={id} />
-      </div>
+        <div>
+            <h3>{videoObj.snippet?.title}</h3>
+            <p>{videoObj.statistics?.viewCount} views</p>
+        </div>
+        <div>
+            <p>{videoObj.snippet?.channelTitle}</p>
+            <p>{videoObj.snippet?.description}</p>
+        </div>
+      </section>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name</label>
         <input

@@ -5,10 +5,7 @@ import React from 'react';
 require("dotenv").config()
 
 const Home = ({videos, fetchVideos, defaultMessage,input, handleChange}) => {
-  
-  
 
-  
   const handleSubmit = (e) => {
     e.preventDefault();
     fetchVideos();
@@ -32,7 +29,8 @@ const Home = ({videos, fetchVideos, defaultMessage,input, handleChange}) => {
                     alt="thumbnail"
                   />
                   <h3>{video.snippet.title}</h3>
-                  {/* // views , name of channel, description */}
+                  <p>{video.snippet.channelTitle}</p>{/* // views , name of channel, description */}
+                  <p>{video.snippet.description}</p>{/* // views , name of channel, description */}
                 </li>
               </Link>
             );
