@@ -1,7 +1,6 @@
 import YouTube from "react-youtube";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import axios from "axios"
 
 
@@ -58,12 +57,12 @@ const Video = (props) => {
         </Link>
         <YouTube videoId={id} />
         <div>
-            <h3>{videoObj.snippet?.title}</h3>
-            <p>{videoObj.statistics?.viewCount} views</p>
+            <h3>{videoObj.snippet&& videoObj.snippet.title}</h3>
+            <p>{videoObj.statistics&& videoObj.snippet.viewCount} views</p>
         </div>
         <div>
-            <p>{videoObj.snippet?.channelTitle}</p>
-            <p>{videoObj.snippet?.description}</p>
+            <p>{videoObj.snippet&& videoObj.snippet.channelTitle}</p>
+            <p>{videoObj.snippet&& videoObj.snippet.description}</p>
         </div>
       </section>
       <form onSubmit={handleSubmit}>

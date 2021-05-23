@@ -4,7 +4,7 @@ import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Video from "./Components/Video";
-import { React, useState } from "react";
+import  React, {useState} from "react";
 import axios from "axios";
 
 function App() {
