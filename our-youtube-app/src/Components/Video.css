@@ -28,6 +28,8 @@
     background: linear-gradient(270deg, #2181fe, #21edfe, #3621fe);
     background-size: 600% 600%;
     border: none;
+    border-radius: 8px;
+    color: #fff;
     font-family: Futura;
     padding: 8px 12px;
     -webkit-animation: AnimationName 9s ease infinite;
@@ -104,10 +106,13 @@ hr {
 }
 
 .comments input[type=text] {
+    border-color: #929292;
+    border-radius: 8px;
     font-family: Futura;
     font-size: 16px;
-    height: 28px;
+    height: 38px;
     margin-left: 8px;
+    outline: none;
     padding-left: 6px;
     width: 200px
 }
@@ -116,6 +121,8 @@ hr {
     background: linear-gradient(270deg, #2181fe, #21edfe, #3621fe);
     background-size: 600% 600%;
     border: none;
+    border-radius: 8px;
+    color: #fff;
     font-family: Futura;
     font-size: 16px;
     padding: 6px 12px;
