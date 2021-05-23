@@ -96,6 +96,7 @@ const Video = (props) => {
           </div>
           <button>Submit</button>
         </div>
+        <h3>Comments: </h3>
         <ul className="comment-sec">
           {commentList.map((comment) => {
             if (comment.name) {
