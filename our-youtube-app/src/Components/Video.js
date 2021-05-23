@@ -1,8 +1,8 @@
 import YouTube from "react-youtube";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import axios from "axios"
-
+import axios from "axios";
+import "./Video.css";
 
 const Video = (props) => {
   const [name, setName] = useState("");
@@ -37,68 +37,81 @@ const Video = (props) => {
 
   const fetchViews = async () => {
     try {
-        const res = await axios.get(`https://youtube.googleapis.com/youtube/v3/videos?part=statistics&part=snippet&id=${id}&key=${process.env.REACT_APP_API_KEY}`)
-        setVideoObj(res.data.items[0])
-        debugger
+      const res = await axios.get(
+        `https://youtube.googleapis.com/youtube/v3/videos?part=statistics&part=snippet&id=${id}&key=${process.env.REACT_APP_API_KEY}`
+      );
+      setVideoObj(res.data.items[0]);
+      debugger;
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
-  }
+  };
   useEffect(() => {
-      fetchViews()
-  }, [])
+    fetchViews();
+  }, []);
 
-  
   return (
-    <main>
-      <section>
-        <Link to="/Home">
-          <button>Go Back</button>
-        </Link>
-        <YouTube videoId={id} />
-        <div>
-            <h3>{videoObj.snippet&& videoObj.snippet.title}</h3>
-            <p>{videoObj.statistics&& videoObj.snippet.viewCount} views</p>
+    <main className="Video">
+      <section className="Youtube-sec">
+        <div className="Youtube">
+          <Link to="/Home">
+            <button>Go Back</button>
+          </Link>
+          <YouTube className="video-box" videoId={id} />
         </div>
-        <div>
-            <p>{videoObj.snippet&& videoObj.snippet.channelTitle}</p>
-            <p>{videoObj.snippet&& videoObj.snippet.description}</p>
+        <div className="title">
+          <h3>{videoObj.snippet && videoObj.snippet.title}</h3>
+          <p>
+            {videoObj.statistics &&
+              Number(videoObj.statistics.viewCount).toLocaleString()}{" "}
+            Views
+          </p>
+        </div>
+        <hr />
+        <div className="description">
+          <p>{videoObj.snippet && videoObj.snippet.channelTitle}</p>
+          <p>{videoObj.snippet && videoObj.snippet.description}</p>
         </div>
       </section>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
-        <input
-          id="name"
-          type="text"
-          placeholder="Name..."
-          value={name}
-          onChange={handleChange}
-        />
-        <label htmlFor="comment">Comment</label>
-        <input
-          id="comment"
-          type="text"
-          placeholder="..."
-          value={comment}
-          onChange={handleChange}
-        />
-        <button>Submit</button>
+        <div className="comments">
+          <div>
+            <label htmlFor="name">Name:</label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Name..."
+              value={name}
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="comment">Comment:</label>
+            <input
+              id="comment"
+              type="text"
+              placeholder="..."
+              value={comment}
+              onChange={handleChange}
+            />
+          </div>
+          <button>Submit</button>
+        </div>
+        <ul className="comment-sec">
+          {commentList.map((comment) => {
+            if (comment.name) {
+              return (
+                <li>
+                  <h3>{comment.name}</h3>
+                  <p>{comment.comment}</p>
+                </li>
+              );
+            } else {
+              return <ul></ul>;
+            }
+          })}
+        </ul>
       </form>
-      <hr />
-      <ul>
-        {commentList.map((comment) => {
-          if (comment.name) {
-            return (
-              <li>
-                <h3>{comment.name}</h3>
-                <p>{comment.comment}</p>
-              </li>
-            );
-          } else {
-            return <ul></ul>;
-          }
-        })}
-      </ul>
     </main>
   );
 };

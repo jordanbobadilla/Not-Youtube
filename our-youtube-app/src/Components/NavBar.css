@@ -12,7 +12,12 @@
     padding: 20px;
     box-shadow: 0px 5px 18px 4px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 5px 18px 4px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 5px 18px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 18px 4px rgba(0,0,0,0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
   }
 
   .first-nav {
