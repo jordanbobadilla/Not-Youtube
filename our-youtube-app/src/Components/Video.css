@@ -1,0 +1,160 @@
+.Video {
+    font-family: Futura;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Video .Youtube-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Youtube {
+    display: flex;
+    justify-content: center;
+    margin: 120px 0 20px;
+    width: 100vw;
+}
+
+.Youtube a {
+    position: absolute;
+    left: 8%;
+}
+
+.Youtube a button {
+    background: linear-gradient(270deg, #2181fe, #21edfe, #3621fe);
+    background-size: 600% 600%;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-family: Futura;
+    padding: 8px 12px;
+    -webkit-animation: AnimationName 9s ease infinite;
+    -moz-animation: AnimationName 9s ease infinite;
+    animation: AnimationName 9s ease infinite;
+}
+
+.video-box {
+    width: 820px;
+    height: 500px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 820px;
+    padding-bottom: 20px;
+}
+
+.title h3 {
+    font-size: 24px;
+}
+
+.title p {
+    font-weight: 600;
+}
+
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 820px;               
+  background-color:#000;
+  height: 2px;
+}
+
+.description {
+    margin: 20px 0;
+    width: 820px;
+}
+
+.description p:first-child {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.description p:nth-child(2) {
+    color: #929292;
+    font-size: 18px;
+}
+
+.Video form {
+    background-color: #fff;
+    border-radius: 8px;
+    height: 100vh;
+    margin: 40px 0 ;
+    width: 820px;
+}
+
+.comments {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.comments div {
+    display: flex;
+    align-items: center;
+}
+
+.comments label {
+    font-size: 18px;
+}
+
+.comments input[type=text] {
+    border-color: #929292;
+    border-radius: 8px;
+    font-family: Futura;
+    font-size: 16px;
+    height: 38px;
+    margin-left: 8px;
+    outline: none;
+    padding-left: 6px;
+    width: 200px
+}
+
+.comments button {
+    background: linear-gradient(270deg, #2181fe, #21edfe, #3621fe);
+    background-size: 600% 600%;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-family: Futura;
+    font-size: 16px;
+    padding: 6px 12px;
+    -webkit-animation: AnimationName 9s ease infinite;
+    -moz-animation: AnimationName 9s ease infinite;
+    animation: AnimationName 9s ease infinite;
+}
+
+.comment-sec{
+    margin-left: 40px;
+    margin-top: 60px;
+    list-style: none;
+}
+
+.comment-sec li {
+    margin-bottom: 40px;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+

@@ -1,36 +1,128 @@
-.home-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
-    padding : 1%;
-    
-    /* height: 100vh; */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
 }
 
-.search-section{
-   display: flex;
-   justify-content: space-around;
-border: solid blue 1px;
-background-color: navy;
+.default-message {
+  font-family: Futura;
+  padding: 10px 60px 10px 60px;
 }
 
-.default-message{
-
-background-color: cornflowerblue;
+.default-message ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  text-decoration: none;
 }
 
-.search-input{
-    color : #929292
-    /* questionable color  */
+.default-message img {
+  height: 220px;
+  width: 300px;
+  /* object-fit: contain; */
 }
 
-button{
-    background-color:blue ;
-    color: white;
-    border-radius: 8px;
+ul > a {
+  text-decoration: none;
 }
 
-input{
-    border-radius: 8px;
+.default-message li {
+  font-family: Futura;
+  list-style: none;
+
+  width: 575px;
+  height: 220px;
+  color: black;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.no-search-results {
+  background-color: white;
+  color: #3B3B3B;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 60px 10px 60px;
+}
+
+.right-side{
+  padding-left: 15px
+}
+
+.right-side h3,
+p {
+  margin: 15px  0px;
+}
+
+.search-input {
+  font-family: Futura;
+  font-size: x-large;
+  border-radius: 8px;
+  height: 40px;
+  width: 400px;
+  margin: 20px;
+  padding: 10px;
+  border: solid 1px #929292;
+  outline: none;
+}
+
+.search-section > form{
+  display:flex;
+align-items: center;
+}
+
+
+.submit-button {
+  font-family: Futura;
+  background: linear-gradient(270deg, #2181fe, #21edfe, #3621fe);
+  -webkit-animation: AnimationName 9s ease infinite;
+  -moz-animation: AnimationName 9s ease infinite;
+  animation: AnimationName 9s ease infinite;
+  background-size: 600% 600%;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  width: 100px;
+  height: 40px;
+  margin-left: 5px;
+  font-size: x-large;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
