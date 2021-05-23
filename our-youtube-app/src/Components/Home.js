@@ -6,7 +6,7 @@ import React,{useEffect,useState} from 'react';
 require("dotenv").config()
 
 const Home = ({videos, fetchVideos, defaultMessage,input, handleChange}) => {
-  const {videoObj, setVideoObj} = useState({});
+  // const {videoObj, setVideoObj} = useState({});
 
   // const fetchViews = async (videoId) =>{
       
@@ -49,8 +49,8 @@ const Home = ({videos, fetchVideos, defaultMessage,input, handleChange}) => {
                   <section className="right-side">
                   <h3>{video.snippet.title}</h3>
                   {/* <h1>{videoObj.viewCount}</h1> */}
-                  <p>{video.snippet.channelTitle}</p>{/* // views , name of channel, description */}
-                  <p>{video.snippet.description}</p>{/* // views , name of channel, description */}
+                  <p>Channel: {video.snippet.channelTitle}</p>{/* // views , name of channel, description */}
+                  <p>Description: {video.snippet.description}</p>{/* // views , name of channel, description */}
                   </section>
                 </li>
               </Link>
