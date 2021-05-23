@@ -37,11 +37,8 @@ const Video = (props) => {
 
   const fetchViews = async () => {
     try {
-      const res = await axios.get(
-        `https://youtube.googleapis.com/youtube/v3/videos?part=statistics&part=snippet&id=${id}&key=${process.env.REACT_APP_API_KEY}`
-      );
-      setVideoObj(res.data.items[0]);
-      debugger;
+        const res = await axios.get(`https://youtube.googleapis.com/youtube/v3/videos?part=statistics&part=snippet&id=${id}&key=${process.env.REACT_APP_API_KEY}`)
+        setVideoObj(res.data.items[0])
     } catch (error) {
       console.log(error);
     }
