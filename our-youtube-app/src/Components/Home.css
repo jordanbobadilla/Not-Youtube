@@ -1,8 +1,9 @@
 .home-container {
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1%;
+  padding: 100px ;
 }
 
 .default-message {
@@ -47,6 +48,8 @@ ul > a {
   flex-wrap: wrap; */
 }
 
+
+
 .no-search-results{
   background-color: white;
   display: flex;
@@ -56,12 +59,15 @@ ul > a {
   padding: 10px 60px 10px 60px;
 }
 
+.right-side h3, p {
+  margin: 5px;
+}
 
 .search-input {
   /* color: #929292; */
   font-family: Futura;
   border-radius: 4px;
-  height: 60px;
+  height: 40px;
   width: 400px;
   margin: 20px;
   padding: 10px;
@@ -80,7 +86,7 @@ ul > a {
   border-radius: 4px;
   color: white;
   width: 100px;
-  height: 60px;
+  height: 40px;
   margin-left: 5px;
   font-size: x-large;
 }
