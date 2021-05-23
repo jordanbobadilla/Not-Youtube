@@ -17,15 +17,16 @@ function App() {
   const fetchVideos = async () => {
     try {
       const res = await axios.get(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&q=${input}&videoTypeUnspecified=videoT&key=${process.env.REACT_APP_API_KEY}`
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${input}&videoTypeUnspecified=videoT&key=${process.env.REACT_APP_API_KEY}`
       );
-      debugger;
       setVideos(res.data.items);
       setDefaultMessage("");
     } catch (error) {
       console.log(error);
     }
   };
+
+ 
 
   const handleChange = (e) => {
     setInput(e.target.value);
