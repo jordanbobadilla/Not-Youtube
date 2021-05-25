@@ -11,6 +11,7 @@ const Video = (props) => {
   const [comments, setComments] = useState({});
   const [commentList, setCommentList] = useState([]);
   const [videoObj, setVideoObj] = useState({});
+  const [counter, setCounter] = useState(0)
   // dont need show list anymore unless we want to toggle between show list and not show
 
   const handleChange = (e) => {
@@ -30,6 +31,11 @@ const Video = (props) => {
     });
   };
 
+  const handleClick1 = () => {
+    // Counter state is incremented
+    setCounter(counter + 1)
+  }
+
   useEffect(() => {
     setCommentList((prevCommentList) => [...prevCommentList, comments]);
   }, [comments]);
@@ -39,7 +45,12 @@ const Video = (props) => {
   const fetchViews = async () => {
     try {
         const res = await axios.get(`https://youtube.googleapis.com/youtube/v3/videos?part=statistics&part=snippet&id=${id}&key=${process.env.REACT_APP_API_KEY}`)
+        
+        if(res.data.items[0]){
         setVideoObj(res.data.items[0])
+        }else{
+          alert("THIS IS A CHANNEL, PLEASE GO BACK AND PICK A VIDEO")
+        }
     } catch (error) {
       console.log(error);
     }
@@ -94,9 +105,9 @@ const Video = (props) => {
               onChange={handleChange}
             />
           </div>
-          <button>Submit</button>
+          <button onClick={handleClick1}>Submit</button>
         </div>
-        <h3>Comments: </h3>
+        <h3>{counter} Comments:</h3>
         <ul className="comment-sec">
           {commentList.map((comment) => {
             if (comment.name) {
