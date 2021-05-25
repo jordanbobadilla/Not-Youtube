@@ -65,7 +65,8 @@ p {
   font-size: x-large;
   border-radius: 8px;
   height: 40px;
-  width: 400px;
+  display: block;
+  width: 100%;
   margin: 20px;
   padding: 10px;
   border: solid 1px #929292;
@@ -74,9 +75,13 @@ p {
 
 .search-section > form{
   display:flex;
-align-items: center;
+  align-items: center;
 }
 
+.search-section form div {
+  padding: 25px 25px;
+  max-width: 800px;
+}
 
 .submit-button {
   font-family: Futura;
@@ -125,5 +130,23 @@ align-items: center;
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@media screen and (max-width: 1250px){
+  .default-message ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .default-message li {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
