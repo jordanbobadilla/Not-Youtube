@@ -90,6 +90,11 @@ hr {
     width: 820px;
 }
 
+.Video form h3 {
+    padding-left: 40px;
+    margin-top: 20px;
+}
+
 .comments {
     display: flex;
     justify-content: space-around;
@@ -106,7 +111,7 @@ hr {
 }
 
 .comments input[type=text] {
-    border-color: #929292;
+    border: 1px solid #929292;
     border-radius: 8px;
     font-family: Futura;
     font-size: 16px;
