@@ -21,7 +21,7 @@
 
 .Youtube a {
     position: absolute;
-    left: 8%;
+    left: 10%;
 }
 
 .Youtube a button {
@@ -38,15 +38,16 @@
 }
 
 .video-box {
-    width: 820px;
-    height: 500px;
+    margin-top: 60px;
+    width: 80vw;
+    height: 400px;
 }
 
 .title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 820px;
+    width: 80vw;
     padding-bottom: 20px;
 }
 
@@ -62,14 +63,14 @@ hr {
   border: 0;
   clear: both;
   display: block;
-  width: 820px;               
+  width: 80vw;               
   background-color:#000;
   height: 2px;
 }
 
 .description {
     margin: 20px 0;
-    width: 820px;
+    width: 80vw;
 }
 
 .description p:first-child {
@@ -87,7 +88,7 @@ hr {
     border-radius: 8px;
     height: 100vh;
     margin: 40px 0 ;
-    width: 820px;
+    width: 80vw;
 }
 
 .Video form h3 {
@@ -95,19 +96,28 @@ hr {
     margin-top: 20px;
 }
 
+.Video form p {
+    padding-left: 40px;
+}
+
 .comments {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     margin-top: 40px;
+    margin-bottom: 0;
 }
 
 .comments div {
     display: flex;
     align-items: center;
+    flex-direction: row;
+    padding-left: 0;
 }
 
 .comments label {
     font-size: 18px;
+    margin-bottom: 0;
 }
 
 .comments input[type=text] {
@@ -131,14 +141,14 @@ hr {
     font-family: Futura;
     font-size: 16px;
     padding: 6px 12px;
+    margin: 0;
     -webkit-animation: AnimationName 9s ease infinite;
     -moz-animation: AnimationName 9s ease infinite;
     animation: AnimationName 9s ease infinite;
 }
 
 .comment-sec{
-    margin-left: 40px;
-    margin-top: 60px;
+    margin-top: 40px;
     list-style: none;
 }
 
@@ -162,4 +172,28 @@ hr {
     100%{background-position:0% 50%}
 }
 
+@media screen and (max-width: 800px) {
+    .comments {
+        flex-direction: column;
+    }
 
+    .comments div {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 40px;
+        margin-bottom: 20px;
+    }
+
+    .comments label {
+        margin-bottom: 10px;
+    }
+
+    .comments input[type=text] {
+        margin-left: 0;
+    }
+
+    .comments button {
+        margin: 20px 40px;
+    }
+}
