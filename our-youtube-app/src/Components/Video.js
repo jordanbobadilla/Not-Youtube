@@ -39,7 +39,12 @@ const Video = (props) => {
   const fetchViews = async () => {
     try {
         const res = await axios.get(`https://youtube.googleapis.com/youtube/v3/videos?part=statistics&part=snippet&id=${id}&key=${process.env.REACT_APP_API_KEY}`)
+        
+        if(res.data.items[0]){
         setVideoObj(res.data.items[0])
+        }else{
+          alert("THIS IS A CHANNEL, PLEASE GO BACK AND PICK A VIDEO")
+        }
     } catch (error) {
       console.log(error);
     }
