@@ -1,199 +1,219 @@
 .Video {
-    font-family: Futura;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  font-family: Futura;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .Video .Youtube-sec {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Youtube {
-    display: flex;
-    justify-content: center;
-    margin: 120px 0 20px;
-    width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin: 120px 0 20px;
+  width: 100vw;
 }
 
 .Youtube a {
-    position: absolute;
-    left: 10%;
+  position: absolute;
+  left: 10%;
 }
 
 .Youtube a button {
-    background: linear-gradient(270deg, #2181fe, #21edfe, #3621fe);
-    background-size: 600% 600%;
-    border: none;
-    border-radius: 8px;
-    color: #fff;
-    font-family: Futura;
-    padding: 8px 12px;
-    -webkit-animation: AnimationName 9s ease infinite;
-    -moz-animation: AnimationName 9s ease infinite;
-    animation: AnimationName 9s ease infinite;
+  background: linear-gradient(270deg, #2181fe, #21edfe, #3621fe);
+  background-size: 600% 600%;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-family: Futura;
+  padding: 8px 12px;
+  -webkit-animation: AnimationName 9s ease infinite;
+  -moz-animation: AnimationName 9s ease infinite;
+  animation: AnimationName 9s ease infinite;
+  cursor: pointer;
 }
 
 .video-box {
-    margin-top: 60px;
-    width: 80vw;
-    height: 400px;
+  margin-top: 60px;
+  width: 80vw;
+  height: 400px;
 }
 
 .title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80vw;
-    padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  padding-bottom: 20px;
 }
 
 .title h3 {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .title p {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 hr {
   border: 0;
   clear: both;
   display: block;
-  width: 80vw;               
-  background-color:#000;
+  width: 80vw;
+  background-color: #000;
   height: 2px;
 }
 
 .description {
-    margin: 20px 0;
-    width: 80vw;
+  margin: 20px 0;
+  width: 80vw;
 }
 
 .description p:first-child {
-    margin-bottom: 20px;
-    font-size: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .description p:nth-child(2) {
-    color: #929292;
-    font-size: 18px;
+  color: #929292;
+  font-size: 18px;
 }
 
 .Video form {
-    background-color: #fff;
-    border-radius: 8px;
-    height: 100vh;
-    margin: 40px 0 ;
-    width: 80vw;
+  background-color: #fff;
+  border-radius: 8px;
+  height: 100vh;
+  margin: 40px 0;
+  width: 80vw;
 }
 
 .Video form h3 {
-    padding-left: 40px;
-    margin-top: 20px;
+  padding-left: 40px;
+  margin-top: 20px;
 }
 
 .Video form p {
-    padding-left: 40px;
+  padding-left: 40px;
 }
 
 .comments {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 40px;
-    margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 40px;
+  margin-bottom: 0;
 }
 
 .comments div {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    padding-left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 0;
 }
 
 .comments label {
-    font-size: 18px;
-    margin-bottom: 0;
+  font-size: 18px;
+  margin-bottom: 0;
 }
 
-.comments input[type=text] {
-    border: 1px solid #929292;
-    border-radius: 8px;
-    font-family: Futura;
-    font-size: 16px;
-    height: 38px;
-    margin-left: 8px;
-    outline: none;
-    padding-left: 6px;
-    width: 200px
+.comments input[type="text"] {
+  border: 1px solid #929292;
+  border-radius: 8px;
+  font-family: Futura;
+  font-size: 16px;
+  height: 38px;
+  margin-left: 8px;
+  outline: none;
+  padding-left: 6px;
+  width: 200px;
 }
 
 .comments button {
-    background: linear-gradient(270deg, #2181fe, #21edfe, #3621fe);
-    background-size: 600% 600%;
-    border: none;
-    border-radius: 8px;
-    color: #fff;
-    font-family: Futura;
-    font-size: 16px;
-    padding: 6px 12px;
-    margin: 0;
-    -webkit-animation: AnimationName 9s ease infinite;
-    -moz-animation: AnimationName 9s ease infinite;
-    animation: AnimationName 9s ease infinite;
+  background: linear-gradient(270deg, #2181fe, #21edfe, #3621fe);
+  background-size: 600% 600%;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-family: Futura;
+  font-size: 16px;
+  padding: 6px 12px;
+  margin: 0;
+  -webkit-animation: AnimationName 9s ease infinite;
+  -moz-animation: AnimationName 9s ease infinite;
+  animation: AnimationName 9s ease infinite;
+  cursor: pointer;
 }
 
-.comment-sec{
-    margin-top: 40px;
-    list-style: none;
+.comment-sec {
+  margin-top: 40px;
+  list-style: none;
 }
 
 .comment-sec li {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 @-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 @-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 @keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .comments {
-        flex-direction: column;
-    }
+  .comments {
+    flex-direction: column;
+  }
 
-    .comments div {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding-left: 40px;
-        margin-bottom: 20px;
-    }
+  .comments div {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 40px;
+    margin-bottom: 20px;
+  }
 
-    .comments label {
-        margin-bottom: 10px;
-    }
+  .comments label {
+    margin-bottom: 10px;
+  }
 
-    .comments input[type=text] {
-        margin-left: 0;
-    }
+  .comments input[type="text"] {
+    margin-left: 0;
+  }
 
-    .comments button {
-        margin: 20px 40px;
-    }
+  .comments button {
+    margin: 20px 40px;
+  }
 }

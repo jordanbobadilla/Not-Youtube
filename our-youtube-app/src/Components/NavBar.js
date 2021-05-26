@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import "./NavBar.css";
 import React from "react";
 import Logo from "../images/Group 1.svg";
+import "./NavBar.css";
 
 const Navbar = () => {
   return (
@@ -12,10 +12,12 @@ const Navbar = () => {
       </nav>
 
       <nav className="sec-nav">
-        <NavLink exact to="/Home">
+        <NavLink exact to="/">
           Home
         </NavLink>
-        <NavLink to="/about" className="about">About Us</NavLink>
+        <NavLink to="/about" className="about">
+          About Us
+        </NavLink>
       </nav>
     </header>
   );
