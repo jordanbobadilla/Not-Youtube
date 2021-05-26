@@ -29,8 +29,8 @@ const Home = ({ videos, fetchVideos, defaultMessage, input, handleChange }) => {
         <ul>
           {videos.map((video) => {
             return (
-              <Link to={`/video/${video.id.videoId}`}>
-                <li key={video.id.videoId}>
+              <Link to={`/video/${video.id.videoId}`} key={video.etag}>
+                <li >
                   <section className="left-side">
                     <img
                       src={video.snippet.thumbnails.medium.url}

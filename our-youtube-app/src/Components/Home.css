@@ -9,6 +9,8 @@
 .default-message {
   font-family: Futura;
   padding: 10px 60px 10px 60px;
+  display: flex;
+  justify-content: center;
 }
 
 .default-message ul {
@@ -46,6 +48,7 @@ ul > a {
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  text-align: center;
   padding: 10px 60px 10px 60px;
   font-size: 24px;
   font-weight: 400;
