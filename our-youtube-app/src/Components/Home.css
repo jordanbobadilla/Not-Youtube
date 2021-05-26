@@ -21,7 +21,6 @@
 .default-message img {
   height: 220px;
   width: 300px;
-  /* object-fit: contain; */
 }
 
 ul > a {
@@ -31,7 +30,6 @@ ul > a {
 .default-message li {
   font-family: Futura;
   list-style: none;
-
   width: 575px;
   height: 220px;
   color: black;
@@ -49,6 +47,8 @@ ul > a {
   align-items: center;
   flex-wrap: wrap;
   padding: 10px 60px 10px 60px;
+  font-size: 24px;
+  font-weight: 400;
 }
 
 .right-side{
@@ -58,6 +58,14 @@ ul > a {
 .right-side h3,
 p {
   margin: 15px  0px;
+}
+
+.right-side p:nth-child(3){
+  color: #929292;
+}
+
+.right-side p:first-child{
+  color: black;
 }
 
 .search-input {
@@ -97,6 +105,7 @@ p {
   height: 40px;
   margin-left: 5px;
   font-size: x-large;
+  cursor: pointer;
 }
 
 @-webkit-keyframes AnimationName {

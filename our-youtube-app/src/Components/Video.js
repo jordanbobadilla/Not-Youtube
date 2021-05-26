@@ -4,15 +4,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Video.css";
 
-
 const Video = (props) => {
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState({});
   const [commentList, setCommentList] = useState([]);
   const [videoObj, setVideoObj] = useState({});
-  const [counter, setCounter] = useState(0)
-  // dont need show list anymore unless we want to toggle between show list and not show
+  const [counter, setCounter] = useState(0);
 
   const handleChange = (e) => {
     const { value, id } = e.target;
@@ -32,9 +30,10 @@ const Video = (props) => {
   };
 
   const handleClick1 = () => {
-    // Counter state is incremented
-    setCounter(counter + 1)
-  }
+    if (name && comment) {
+      setCounter(counter + 1);
+    }
+  };
 
   useEffect(() => {
     setCommentList((prevCommentList) => [...prevCommentList, comments]);
@@ -44,13 +43,14 @@ const Video = (props) => {
 
   const fetchViews = async () => {
     try {
-        const res = await axios.get(`https://youtube.googleapis.com/youtube/v3/videos?part=statistics&part=snippet&id=${id}&key=${process.env.REACT_APP_API_KEY}`)
-        
-        if(res.data.items[0]){
-        setVideoObj(res.data.items[0])
-        }else{
-          alert("THIS IS A CHANNEL, PLEASE GO BACK AND PICK A VIDEO")
-        }
+      const res = await axios.get(
+        `https://youtube.googleapis.com/youtube/v3/videos?part=statistics&part=snippet&id=${id}&key=${process.env.REACT_APP_API_KEY}`
+      );
+      if (res.data.items[0]) {
+        setVideoObj(res.data.items[0]);
+      } else {
+        alert("THIS IS A CHANNEL, PLEASE GO BACK AND PICK A VIDEO");
+      }
     } catch (error) {
       console.log(error);
     }
@@ -60,11 +60,10 @@ const Video = (props) => {
   }, []);
 
   return (
-
     <main className="Video">
       <section className="Youtube-sec">
         <div className="Youtube">
-          <Link to="/Home">
+          <Link to="/">
             <button>Go Back</button>
           </Link>
           <YouTube className="video-box" videoId={id} />
@@ -92,6 +91,7 @@ const Video = (props) => {
               type="text"
               placeholder="Name..."
               value={name}
+              required
               onChange={handleChange}
             />
           </div>
@@ -102,12 +102,13 @@ const Video = (props) => {
               type="text"
               placeholder="..."
               value={comment}
+              required
               onChange={handleChange}
             />
           </div>
           <button onClick={handleClick1}>Submit</button>
         </div>
-        <h3>{counter} Comments:</h3>
+        <h3>{counter} Comments</h3>
         <ul className="comment-sec">
           {commentList.map((comment) => {
             if (comment.name) {
