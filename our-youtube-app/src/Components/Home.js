@@ -28,7 +28,6 @@ const Home = ({ videos, fetchVideos, defaultMessage, input, handleChange }) => {
       <section className="default-message">
         <ul>
           {videos.map((video) => {
-            // debugger
             return (
               <Link to={`/video/${video.id.videoId}`} key={video.etag}>
                 <li >
