@@ -113,7 +113,7 @@ const Video = (props) => {
           {commentList.map((comment) => {
             if (comment.name) {
               return (
-                <li>
+                <li key={comment.name}>
                   <h3>{comment.name}</h3>
                   <p>{comment.comment}</p>
                 </li>
