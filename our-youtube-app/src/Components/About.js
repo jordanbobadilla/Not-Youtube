@@ -65,10 +65,10 @@ const About = () => {
             />
             <h5>Jordan Bobadilla</h5>
             <p>
-              I am a Music Producer and a Software Developer who wants to leave
+              I am a Dominican, Music Producer and a Software Developer who wants to leave
               a legacy in this world. With my background in Music Production, I
               develop and create tools for music producers and mixing and
-              mastering engineers around the world. "Believe it"
+              mastering engineers around the world.
             </p>
             <a
               href="https://github.com/jordanbobadilla"
